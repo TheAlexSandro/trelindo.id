@@ -114,7 +114,6 @@ body {
 .app-layout {
     position: relative;
     width: 100%;
-    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -157,8 +156,7 @@ body {
 /* =================================
    2. KONTEN CARD (Untuk index.html)
    ================================= */
-
-.card-header {
+#riw {
     min-height: 100vh;
 }
 
