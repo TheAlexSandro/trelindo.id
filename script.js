@@ -1,5 +1,3 @@
-// File: script.js
-
 const databaseTiket = [
   {
     kode_booking: "8997218380432",
@@ -21,29 +19,21 @@ const databaseTiket = [
     jam_tiba: "16:45",
     jumlah_penumpang: "2 Dewasa",
   },
-  // Tambahkan data tiket lain jika perlu
 ];
 
 const barcodeInput = document.getElementById("barcodeInput");
 const resultDiv = document.getElementById("result");
 
-// --- FUNGSI BARU UNTUK MENYIMPAN RIWAYAT ---
 function simpanTransaksi(kode, status) {
-  // Ambil data riwayat dari localStorage, jika tidak ada, buat array kosong
   const riwayat = JSON.parse(localStorage.getItem("riwayatTransaksi")) || [];
-
-  // Tambahkan data baru
   riwayat.unshift({
-    // unshift agar data baru selalu di paling atas
     kode: kode,
     status: status,
-    waktu: new Date().toISOString(), // Simpan waktu scan
+    waktu: new Date().toISOString(),
   });
 
-  // Simpan kembali ke localStorage
   localStorage.setItem("riwayatTransaksi", JSON.stringify(riwayat));
-}
-// ---------------------------------------------
+}--
 
 barcodeInput.addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
@@ -59,10 +49,10 @@ barcodeInput.addEventListener("keydown", function (event) {
                     <h2>❌ TIKET TIDAK DITEMUKAN</h2>
                     <p>Kode <strong>${kodeScan}</strong> tidak terdaftar dalam sistem.</p>
                 </div>`;
+      return;
     }
 
     simpanTransaksi(kodeScan, "Berhasil");
-    // Alihkan ke halaman detail.html sambil mengirim kode booking via URL
     window.location.href = `detail.html?kode=${kodeScan}`;
 
     barcodeInput.value = "";

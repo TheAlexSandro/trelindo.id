@@ -1,5 +1,3 @@
-// File: transaksi.js
-
 window.onload = function() {
     const riwayatContainer = document.getElementById('riwayat-list');
     const riwayat = JSON.parse(localStorage.getItem('riwayatTransaksi')) || [];

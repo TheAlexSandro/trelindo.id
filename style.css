@@ -1,10 +1,7 @@
-/* File: navbar.css */
-/* File: navbar.css (Diperbarui) */
-
 nav.navbar {
     background-color: #fff;
     padding: 0 40px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
     left: 0;
@@ -29,68 +26,56 @@ nav.navbar .nav-links {
     padding: 0;
 }
 
-/* =================================
-   STYLING DROPDOWN BARU
-   ================================= */
-
-/* 1. Atur posisi untuk item dropdown utama */
 .dropdown {
-    position: relative; /* Penting agar submenu bisa diposisikan */
+    position: relative;
     display: inline-block;
 }
 
-/* 2. Tombol utama (logo rumah) */
 .dropdown .dropdown-toggle {
     display: block;
     padding: 10px 15px;
-    font-size: 1.5em; /* Ukuran logo */
+    font-size: 1.5em;
     color: #555;
     border-radius: 5px;
 }
 
-/* 3. Sembunyikan submenu secara default */
 .dropdown-menu {
     display: none;
     position: absolute;
-    right: 0; /* Posisi submenu di kanan */
-    top: 100%; /* Muncul tepat di bawah tombol utama */
+    right: 0;
+    top: 100%;
     background-color: white;
     min-width: 220px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     list-style: none;
     padding: 10px 0;
     z-index: 1;
 }
 
-/* 4. Tampilkan submenu saat item dropdown di-hover */
 .dropdown:hover .dropdown-menu {
     display: block;
 }
 
-/* 5. Styling untuk setiap item di dalam submenu */
 .dropdown-menu li a {
     color: #333;
     padding: 12px 20px;
     text-decoration: none;
-    display: block; /* Membuat seluruh area bisa diklik */
+    display: block;
     font-weight: 500;
     transition: background-color 0.2s;
 }
 
-/* 6. Efek hover pada item submenu */
 .dropdown-menu li a:hover {
     background-color: #f1f1f1;
 }
 
-/* 7. Beri jarak antara logo dan teks */
 .dropdown-menu li a i {
     margin-right: 15px;
-    width: 20px; /* Agar teks lurus */
+    width: 20px;
     color: #007bff;
 }
 
-/* Menggunakan font dari Google Fonts agar lebih modern */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 * {
@@ -100,16 +85,10 @@ nav.navbar .nav-links {
 }
 
 body {
-    /* [NUSANTARA THEME] Ganti font utama dan warna background menjadi krem hangat */
     font-family: 'Poppins', sans-serif;
-    background-color: #FDF6E3; /* Warna krem seperti kertas kuno */
-    color: #4A3728; /* Warna teks cokelat tua */
+    background-color: #FDF6E3;
+    color: #4A3728;
 }
-
-
-/* =================================
-   1. LAYOUT UTAMA (Untuk semua halaman)
-   ================================= */
 
 .app-layout {
     position: relative;
@@ -127,7 +106,6 @@ body {
     transform: translate(-50%, -40%);
     min-width: 100%;
     min-height: 100vh;
-    /* [NUSANTARA THEME] Ganti gradient dengan pola batik */
     background: url('elegant_golden_irregular_organic_seamless_pattern.jpg') center no-repeat;
     background-size: cover;
     border-radius: 0 0 30px 30px;
@@ -135,36 +113,29 @@ body {
 
 .validator-card {
     margin-top: 10%;
-    background-color: rgba(255, 255, 255, 0.95); /* Sedikit transparan */
+    background-color: rgba(255, 255, 255, 0.95);
     padding: 25px 30px;
     border-radius: 20px;
-    /* [NUSANTARA THEME] Ganti shadow dan tambahkan border emas */
     box-shadow: 0 10px 30px rgba(80, 45, 20, 0.2);
-    border: 1px solid #D4AF37; /* Border warna emas */
+    border: 1px solid #D4AF37;
     width: 100%;
     max-width: 450px;
     z-index: 10;
     text-align: center;
-    
-    /* [NUSANTARA THEME] Tambahkan aksen gunungan di background kartu */
     background-image: url('gunungan.png');
     background-repeat: no-repeat;
     background-position: bottom -50px center;
     background-size: 80%;
 }
 
-/* =================================
-   2. KONTEN CARD (Untuk index.html)
-   ================================= */
 #riw {
-    min-height: 100vh;
+    min-height: fit-content;
 }
 
 .card-header h1 {
-    /* [NUSANTARA THEME] Gunakan font kustom untuk judul */
     font-family: 'Rozha One', serif;
     font-size: 2.2em;
-    color: #5D4037; /* Cokelat tua */
+    color: #5D4037;
 }
 
 .card-header p {
@@ -174,7 +145,7 @@ body {
 }
 
 .input-group {
-    border: 1px solid #D4AF37; /* Border emas */
+    border: 1px solid #D4AF37;
     border-radius: 10px;
     padding: 5px 15px;
     margin-bottom: 25px;
@@ -182,8 +153,9 @@ body {
 }
 
 .input-group i {
-    color: #B8860B; /* Emas tua */
+    color: #B8860B;
 }
+
 #barcodeInput {
     border: none;
     outline: none;
@@ -198,6 +170,7 @@ body {
     font-size: 0.8em;
     color: #8C6D5B;
 }
+
 #barcodeInput::placeholder {
     color: #ccc;
 }
@@ -211,11 +184,6 @@ body {
     padding-top: 15px;
     border-top: 1px solid #eee;
 }
-
-
-/* =================================
-   3. Tampilan Hasil Gagal (di index.html)
-   ================================= */
 
 .ticket {
     padding: 20px;
@@ -245,43 +213,46 @@ body {
 .ticket-header-success i {
     color: #28a745;
 }
+
 .ticket-header-success h2 {
     font-family: 'Rozha One', serif;
     color: #28a745;
 }
+
 .ticket-header-fail h2 {
     font-family: 'Rozha One', serif;
 }
 
 .detail-item i {
-    /* [NUSANTARA THEME] Ganti warna ikon dari biru menjadi emas */
     color: #B8860B;
 }
 
-/* =================================
-   4. TAMBAHAN UNTUK HALAMAN DETAIL
-   ================================= */
-
-.ticket-header-success, .ticket-header-fail {
+.ticket-header-success,
+.ticket-header-fail {
     text-align: center;
     margin-bottom: 25px;
 }
+
 .ticket-header-success i {
     font-size: 3em;
     color: #28a745;
 }
+
 .ticket-header-success h2 {
     color: #28a745;
     margin-top: 10px;
 }
+
 .ticket-header-fail i {
     font-size: 3em;
     color: #dc3545;
 }
+
 .ticket-header-fail h2 {
     color: #dc3545;
     margin-top: 10px;
 }
+
 .ticket-info .tujuan {
     display: flex;
     justify-content: space-around;
@@ -293,30 +264,31 @@ body {
     font-size: 1.2em;
     font-weight: 600;
 }
+
 .detail-item {
     display: flex;
     justify-content: space-between;
     padding: 15px 5px;
     border-bottom: 1px solid #eee;
 }
+
 .detail-item:last-child {
     border-bottom: none;
 }
+
 .detail-item span {
     color: #666;
 }
+
 .detail-item i {
     margin-right: 8px;
     color: #007bff;
 }
+
 .detail-item strong {
     color: #333;
     text-align: right;
 }
-
-/* =================================
-   5. TAMBAHAN UNTUK HALAMAN TRANSAKSI
-   ================================= */
 
 .bg-trans {
     position: absolute;
@@ -329,16 +301,18 @@ body {
     background-size: cover;
 }
 
-   #riwayat-list ul {
+#riwayat-list ul {
     list-style: none;
     padding: 0;
 }
+
 .riwayat-item {
     padding: 20px;
     margin-bottom: 10px;
     border: 1px solid #D4AF37;
     background-color: #FFFBF2;
 }
+
 .lihat-detail {
     text-decoration: none;
     background-color: #007bff;
@@ -346,11 +320,13 @@ body {
     padding: 5px 15px;
     border-radius: 5px;
     font-size: 0.9em;
-    white-space: nowrap; /* Agar tidak terpotong */
+    white-space: nowrap;
 }
+
 .lihat-detail:hover {
     background-color: #0056b3;
 }
+
 .riwayat-item .status {
     font-weight: 600;
     padding: 5px 10px;
@@ -358,14 +334,25 @@ body {
     color: white;
     font-size: 0.8em;
 }
-.riwayat-item.berhasil { background-color: #e9f7ef; }
-.riwayat-item.berhasil .status { background-color: #28a745; }
 
-.riwayat-item.gagal { background-color: #f8d7da; }
-.riwayat-item.gagal .status { background-color: #dc3545; }
+.riwayat-item.berhasil {
+    background-color: #e9f7ef;
+}
+
+.riwayat-item.berhasil .status {
+    background-color: #28a745;
+}
+
+.riwayat-item.gagal {
+    background-color: #f8d7da;
+}
+
+.riwayat-item.gagal .status {
+    background-color: #dc3545;
+}
 
 .riwayat-item .kode {
-    flex-grow: 1; /* Ambil sisa ruang */
+    flex-grow: 1;
     padding: 0 15px;
 }
 

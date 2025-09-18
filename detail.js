@@ -1,6 +1,3 @@
-// File: detail.js
-
-// Database tiket harus ada di sini juga agar bisa mencari data
 const databaseTiket = [
     {
         kode_booking: "8997218380432",
@@ -26,8 +23,6 @@ const databaseTiket = [
 
 window.onload = function() {
     const detailCard = document.getElementById('detail-tiket-card');
-    
-    // Ambil parameter 'kode' dari URL
     const params = new URLSearchParams(window.location.search);
     const kodeTiket = params.get('kode');
 
@@ -35,12 +30,9 @@ window.onload = function() {
         detailCard.innerHTML = "<h2>Error: Kode tiket tidak ditemukan.</h2>";
         return;
     }
-
-    // Cari tiket di database
     const tiket = databaseTiket.find(t => t.kode_booking === kodeTiket);
 
     if (tiket) {
-        // Jika tiket ditemukan, tampilkan detailnya
         detailCard.innerHTML = 
             `<div class="ticket-header-success">
                 <i class="fa-solid fa-circle-check"></i>
@@ -71,7 +63,6 @@ window.onload = function() {
             </div>`
         ;
     } else {
-        // Jika kode di URL tidak valid
         detailCard.innerHTML = 
             `<div class="ticket-header-fail">
                 <i class="fa-solid fa-circle-xmark"></i>
@@ -81,6 +72,3 @@ window.onload = function() {
         ;
     }
 };
-
-// Tambahkan sedikit CSS di style.css untuk styling halaman detail
-/* Buka file style.css dan tambahkan kode di bawah ini di bagian paling akhir */
