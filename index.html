@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validasi E-Tiket Kereta Api</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand"><span>Scanner Tiket Trelindo</span></a>
+        <ul class="nav-links">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">
+                    <i class="fa-solid fa-house"></i> </a>
+
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="index.html">
+                            <i class="fa-solid fa-house-chimney"></i> Halaman Awal
+                        </a>
+                    </li>
+                    <li>
+                        <a href="transaksi.html">
+                            <i class="fa-solid fa-history"></i> Riwayat Transaksi
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div class="app-layout">
+        <div class="header-background"></div>
+        <div class="validator-card">
+            <div class="card-header">
+                <h1>Validasi E-Tiket</h1>
+                <p>Pindai barcode pada e-tiket Anda untuk melakukan validasi.</p>
+            </div>
+
+            <div class="card-body">
+                <div class="input-group">
+                    <i class="fa-solid fa-barcode"></i>
+                    <input type="text" id="barcodeInput" placeholder="Arahkan scanner ke sini..." autofocus>
+                </div>
+
+                <div id="result">
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <p>Transportasi Rel Indonesia</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

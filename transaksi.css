@@ -1,0 +1,43 @@
+/* --- Tambahan untuk Halaman Transaksi --- */
+#riwayat-list ul {
+    list-style: none;
+    padding: 0;
+}
+.riwayat-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+}
+.riwayat-item .status {
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 0.8em;
+}
+.riwayat-item.berhasil { background-color: #e9f7ef; }
+.riwayat-item.berhasil .status { background-color: #28a745; }
+
+.riwayat-item.gagal { background-color: #f8d7da; }
+.riwayat-item.gagal .status { background-color: #dc3545; }
+
+.riwayat-item .waktu {
+    font-size: 0.9em;
+    color: #777;
+}
+
+.lihat-detail {
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+.lihat-detail:hover {
+    background-color: #0056b3;
+}

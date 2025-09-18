@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riwayat Transaksi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand">Scanner Tiket Trelindo</a>
+        <ul class="nav-links">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">
+                    <i class="fa-solid fa-house"></i> </a>
+
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="index.html">
+                            <i class="fa-solid fa-house-chimney"></i> Halaman Awal
+                        </a>
+                    </li>
+                    <li>
+                        <a href="transaksi.html">
+                            <i class="fa-solid fa-history"></i> Riwayat Transaksi
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="app-layout bg-trans">
+        <div class="validator-card" style="max-width: 700px; text-align: left;">
+            <div class="card-header" style="text-align: center;">
+                <h1>Riwayat Validasi Tiket</h1>
+            </div>
+            <div id="riwayat-list">
+            </div>
+        </div>
+    </div>
+
+    <script src="transaksi.js"></script>
+</body>
+
+</html>
